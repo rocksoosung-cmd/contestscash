@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -56,6 +58,14 @@
         .sr-only {
             position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
             overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border-width: 0;
+        }
+
+        /* Swiper 슬라이더 세로 규격 깨짐 방지 (핵심 수정) */
+        .swiper-slide { 
+            height: auto !important; 
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
         }
     </style>
 </head>
@@ -170,38 +180,46 @@
                 <div class="swiper-wrapper">
                     <!-- 후기 1 -->
                     <div class="swiper-slide bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <div class="flex items-center gap-1 text-accent mb-2 text-lg">
-                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        <div>
+                            <div class="flex items-center gap-1 text-accent mb-2 text-lg">
+                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                            </div>
+                            <p class="font-bold mb-2 text-gray-800">새벽에도 3분만에 입금됐네요</p>
+                            <p class="text-sm text-gray-600">급하게 돈이 필요했는데 채널톡 남기자마자 1분만에 답장오시고 바로 처리해주셨어요. 최고!</p>
                         </div>
-                        <p class="font-bold mb-2 text-gray-800">새벽에도 3분만에 입금됐네요</p>
-                        <p class="text-sm text-gray-600">급하게 돈이 필요했는데 채널톡 남기자마자 1분만에 답장오시고 바로 처리해주셨어요. 최고!</p>
                         <p class="text-xs text-gray-400 mt-4">- 박*현 님</p>
                     </div>
                     <!-- 후기 2 -->
                     <div class="swiper-slide bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <div class="flex items-center gap-1 text-accent mb-2 text-lg">
-                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        <div>
+                            <div class="flex items-center gap-1 text-accent mb-2 text-lg">
+                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                            </div>
+                            <p class="font-bold mb-2 text-gray-800">미납 정책 걸렸었는데 해결완료</p>
+                            <p class="text-sm text-gray-600">다른 곳에서는 다 안된다고 해서 포기하고 있었는데, 여기서는 남은 한도 싹 다 찾아주셨습니다 ㅠㅠ</p>
                         </div>
-                        <p class="font-bold mb-2 text-gray-800">미납 정책 걸렸었는데 해결완료</p>
-                        <p class="text-sm text-gray-600">다른 곳에서는 다 안된다고 해서 포기하고 있었는데, 여기서는 남은 한도 싹 다 찾아주셨습니다 ㅠㅠ</p>
                         <p class="text-xs text-gray-400 mt-4">- 이*성 님</p>
                     </div>
                     <!-- 후기 3 -->
                     <div class="swiper-slide bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <div class="flex items-center gap-1 text-accent mb-2 text-lg">
-                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
+                        <div>
+                            <div class="flex items-center gap-1 text-accent mb-2 text-lg">
+                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-half-fill"></i>
+                            </div>
+                            <p class="font-bold mb-2 text-gray-800">수수료가 가장 투명해요</p>
+                            <p class="text-sm text-gray-600">안내받은 금액에서 단 1원도 안 빼고 그대로 입금해주시네요. 믿고 거래할 수 있는 유일한 곳입니다.</p>
                         </div>
-                        <p class="font-bold mb-2 text-gray-800">수수료가 가장 투명해요</p>
-                        <p class="text-sm text-gray-600">안내받은 금액에서 단 1원도 안 빼고 그대로 입금해주시네요. 믿고 거래할 수 있는 유일한 곳입니다.</p>
                         <p class="text-xs text-gray-400 mt-4">- 최*아 님</p>
                     </div>
                     <!-- 후기 4 -->
                     <div class="swiper-slide bg-white p-6 rounded-xl shadow-sm border border-gray-100">
-                        <div class="flex items-center gap-1 text-accent mb-2 text-lg">
-                            <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                        <div>
+                            <div class="flex items-center gap-1 text-accent mb-2 text-lg">
+                                <i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i><i class="ri-star-fill"></i>
+                            </div>
+                            <p class="font-bold mb-2 text-gray-800">초보자도 쉽고 친절한 안내</p>
+                            <p class="text-sm text-gray-600">처음 해보는 거라 걱정이 많았는데 상담원 분이 처음부터 끝까지 너무 친절하게 알려주셨어요.</p>
                         </div>
-                        <p class="font-bold mb-2 text-gray-800">초보자도 쉽고 친절한 안내</p>
-                        <p class="text-sm text-gray-600">처음 해보는 거라 걱정이 많았는데 상담원 분이 처음부터 끝까지 너무 친절하게 알려주셨어요.</p>
                         <p class="text-xs text-gray-400 mt-4">- 정*민 님</p>
                     </div>
                 </div>
@@ -260,7 +278,7 @@
             }
         });
 
-        // 2. 계산기 로직
+        // 2. 계산기 로직 (요율 60% 현실화 반영)
         function formatNumber(input) {
             let val = input.value.replace(/[^0-9]/g, '');
             input.value = val.replace(/\B(?=(\d{3})+(?!\d))/g, ",");
@@ -272,7 +290,7 @@
                 return;
             }
             let amount = parseInt(val);
-            let result = Math.floor(amount * 0.6); // 예시: 60% 정산율 가정
+            let result = Math.floor(amount * 0.6); // 60% 현실 정산율 적용
             document.getElementById('calcResult').innerText = result.toLocaleString() + '원';
         }
 
